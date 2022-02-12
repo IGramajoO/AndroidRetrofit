@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/activity_book_item.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/activity_book_search.xml" value="0.1" />
+        <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/book_item.xml" value="0.1" />
         <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/booksearch.xml" value="0.33" />
         <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/fragment_booksearch.xml" value="0.33" />
         <entry key="..\:/Users/igram/AndroidStudioProjects/Retrofit/app/src/main/res/layout/mynavgraph.xml" value="0.30364583333333334" />

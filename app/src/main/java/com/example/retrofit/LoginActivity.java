@@ -11,11 +11,11 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
 
-import com.example.retrofit.db.AppDatabase;
 import com.example.retrofit.db.User;
+import com.example.retrofit.db.AppDatabase;
 import com.example.retrofit.db.UserDao;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     private static final String USER_ID_KEY = "com.example.retrofit.userIdKey";
 
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
         mUsernameField = findViewById(R.id.usernameEditText);
         mPasswordField = findViewById(R.id.passwordEditText);
 
@@ -48,11 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 .build()
                 .getUserDao();
 
-        if(mUserDAO.getUserByUsername("test") == null) {
-            User defaultUser = new User("test", "test");
-            mUserDAO.insert(defaultUser);
-        }
-
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     if(!verifyUser()){
                         Toast.makeText(getApplicationContext(), "Invalid password", Toast.LENGTH_SHORT).show();
                     }else{
-                        Intent intent = new Intent(getApplicationContext(), BookSearchActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), BookSearchFragment.class);
                         mUserId = mUser.getId();
                         intent.putExtra(USER_ID_KEY, mUserId);
                         startActivity(intent);
@@ -72,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    boolean checkForUserInDatabase(){
+    private boolean checkForUserInDatabase(){
         mUser = mUserDAO.getUserByUsername(mUsername);
         if (mUser == null){
             Toast.makeText(this, mUsername + " not found", Toast.LENGTH_SHORT).show();

@@ -10,4 +10,5 @@
         android:name="com.example.retrofit.BookSearchFragment"
         android:label="fragment_booksearch"
         tools:layout="@layout/fragment_booksearch" />
+
 </navigation>
